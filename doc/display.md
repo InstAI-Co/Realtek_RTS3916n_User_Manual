@@ -16,6 +16,12 @@ We provide another repository containing more detailed information. Inside, ther
 git clone https://github.com/InstAI-Co/Realtek-RTS3916n-Display-Multiple-Image.git
 ```
 
+Username: `InstAI-Co`
+
+Token:
+
+`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`
+
 After setting up the environments, you can select one of the modes to use.
 
 </details>
