@@ -1,11 +1,11 @@
-# How To Display Frame In The Real-Time
+# <div align="center">How To Display Frame In The Real-Time</div>
 
 There are two different ways to display the frames in the window, and the list below is our main method to transport the image, as follows:
 
 - NFS
 - UDP
 
-## How to Start
+## <div align="center">How to Start</div>
 
 We provide another repository containing more detailed information. Inside, there is a README.md file that describes how to use these files.
 
