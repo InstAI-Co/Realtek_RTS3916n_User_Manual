@@ -45,4 +45,9 @@ python src/udp-server.py <IP> <PORT>
 
 This is an efficient way to display the frames because it provides an easy interface to capture the frames sent by the Realtek EVB. It also shows low latency compared with NFS-based transport.
 
+Congratulations! You have completed this tutorial. You can refer to other documents below:
+
+- [Connect To Realtek Board](./connect_board.md)
+- [How To Excute the Inference](./inference.md)
+
 </details>
