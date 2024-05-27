@@ -13,5 +13,6 @@ This README.md is a user manual for building the environment that can run AI Inf
 ## Table of Contents
 
 - [Connect To Realtek Board](./doc/connect_board.md)
+- [How To Transfer Model](./doc/transfer.md)
 - [How To Excute the Inference](./doc/inference.md)
 - [How To Display Frame In Real-Time](./doc/display.md)

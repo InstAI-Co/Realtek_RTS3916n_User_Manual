@@ -127,9 +127,10 @@ mount -t nfs -o nolock 192.168.XXX.XXX:/path/to/your/folder/ /mnt/
     <img src="../img/mount.png" width="700">
 </div>
 
+</details>
+
 Congratulations! You have completed this tutorial. You can refer to other documents below:
 
-- [How To Excute the Inference](./inference.md)
-- [How To Display Frame In Real-Time](./display.md)
-
-</details>
+- [How To Transfer Model](./doc/transfer.md)
+- [How To Excute the Inference](./doc/inference.md)
+- [How To Display Frame In Real-Time](./doc/display.md)
