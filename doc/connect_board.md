@@ -131,6 +131,6 @@ mount -t nfs -o nolock 192.168.XXX.XXX:/path/to/your/folder/ /mnt/
 
 Congratulations! You have completed this tutorial. You can refer to other documents below:
 
-- [How To Transfer Model](./doc/transfer.md)
-- [How To Excute the Inference](./doc/inference.md)
-- [How To Display Frame In Real-Time](./doc/display.md)
+- [How To Transfer Model](../doc/transfer.md)
+- [How To Excute the Inference](../doc/inference.md)
+- [How To Display Frame In Real-Time](../doc/display.md)
