@@ -13,14 +13,9 @@ We provide another repository containing more detailed information. Inside, ther
 <summary>Clone</summary>
 
 ```shell
+# This command will require you to enter a key to access. Please contact us, and we will provide the key for you.
 git clone https://github.com/InstAI-Co/Realtek-RTS3916n-Display-Multiple-Image.git
 ```
-
-Username: `InstAI-Co`
-
-Token:
-
-`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`
 
 After setting up the environments, you can select one of the modes to use.
 
@@ -29,7 +24,7 @@ After setting up the environments, you can select one of the modes to use.
 <details open>
 <summary>Usage</summary>
 
-- NFS
+### NFS
 
 ```shell
 python src/display-real-time.py path/to/stream/image/
@@ -37,7 +32,7 @@ python src/display-real-time.py path/to/stream/image/
 
 Since the NFS mode will generate multiple images in the common folder, it means that when the detected frame is saved in bitmap format, the computer-side will capture the latest frame and display it in the window to simulate real-time.
 
-- UDP
+### UDP
 
 ```shell
 python src/udp-server.py <IP> <PORT>
