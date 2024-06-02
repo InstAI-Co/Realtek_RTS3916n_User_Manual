@@ -35,7 +35,7 @@ Since the NFS mode will generate multiple images in the common folder, it means 
 ### UDP
 
 ```shell
-python src/udp-server.py <IP> <PORT>
+python src/udp-server.py <IP> <PORT> <RESIZE_WIDTH> <RESIZE_HEIGHT>
 ```
 
 This is an efficient way to display the frames because it provides an easy interface to capture the frames sent by the Realtek EVB. It also shows low latency compared with NFS-based transport.
