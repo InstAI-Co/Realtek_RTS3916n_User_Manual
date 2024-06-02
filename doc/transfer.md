@@ -8,7 +8,7 @@ The image below describes the procedure. We will use "acuity tool" to convert yo
 
 ## <div align="center">How to Start</div>
 
-We provide the Container to let user can easyily sampling, convert model and cross compile. you can download [here](https://drive.google.com/file/d/1P_KSL9sb0hIdWASlpk6GZ04Bz1ZWF3Mb/view).
+We provide the Container to let user can easyily sampling, convert model and cross compile. you can download [here (need to update)](https://drive.google.com/file/d/1P_KSL9sb0hIdWASlpk6GZ04Bz1ZWF3Mb/view).
 
 <details open>
 <summary>Load/Run Container</summary>
@@ -26,6 +26,7 @@ Before starting, let's briefly explain the different features. As you can see, t
 - `collect.sh`: Collect images from the camera.
 - `convert.sh`: Convert the input model to a specific format.
 - `compile.sh`: Cross compile the project.
+- `upd.sh`: (for demo) Cross-compile the project and send data to the UDP server (Refer to [REPO](https://github.com/InstAI-Co/Realtek-RTS3916n-Display-Multiple-Image.git))
 
 ![alt text](../img/docker-procedure.png)
 
@@ -84,6 +85,13 @@ select mode:
 
 Hint: In the Inference mode, there are two types that can be selected after you choose the mode.
 
+After selecting the mode, you need to enter the correct number of classes. Otherwise, it will fail when you deploy it on the board.
+
+```shell
+# Input 
+Class Num:
+```
+
 After Cross Compile, you will get the `build` folder inside the `transfer_model`:
 
 ```shell
@@ -96,6 +104,4 @@ network_binary.nb  yolov3tiny
 
 Congratulations! You have completed this tutorial. You can refer to other documents below:
 
-- [Connect To Realtek Board](../doc/connect_board.md)
 - [How To Excute the Inference](../doc/inference.md)
-- [How To Display Frame In Real-Time](../doc/display.md)
