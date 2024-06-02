@@ -15,18 +15,21 @@ We provide the Container to let user can easyily sampling, convert model and cro
 
 ```shell
 # Load Image
-docker load -i transfer_modelv2.tar
+docker load -i container.tar
 
 # Run Container
-docker run -it --rm -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v2
+docker run -it --rm -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v3
 ```
 
 Before starting, let's briefly explain the different features. As you can see, there are three main functions:
 
-- `collect.sh`: Collect images from the camera.
-- `convert.sh`: Convert the input model to a specific format.
-- `compile.sh`: Cross compile the project.
-- `upd.sh`: (for demo) Cross-compile the project and send data to the UDP server (Refer to [REPO](https://github.com/InstAI-Co/Realtek-RTS3916n-Display-Multiple-Image.git))
+`collect.sh`: Collect images from the camera.
+
+`convert.sh`: Convert the input model to a specific format.
+
+`compile.sh`: Cross compile the project.
+
+`upd.sh`: (optional) Cross-compile the project and send data to the UDP server (Refer to [UDP](../doc/udp.md))
 
 ![alt text](../img/docker-procedure.png)
 
@@ -89,7 +92,7 @@ After selecting the mode, you need to enter the correct number of classes. Other
 
 ```shell
 # Input 
-Class Num:
+Classes Num:
 ```
 
 After Cross Compile, you will get the `build` folder inside the `transfer_model`:

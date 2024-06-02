@@ -16,3 +16,7 @@ This README.md is a user manual for building the environment that can run AI Inf
 - [How To Transfer Model](./doc/transfer.md)
 - [How To Excute the Inference](./doc/inference.md)
 - [How To Display Frame In Real-Time](./doc/display.md)
+
+## Application
+
+- [How To Transfer Project To UDP Mode](./doc/udp.md)
