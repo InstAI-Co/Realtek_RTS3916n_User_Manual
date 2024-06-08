@@ -34,7 +34,9 @@ sudo minicom -s
 sudo minicom -D /dev/ttyUSB0
 ```
 
-The '/dev/ttyUSB0' is a 'USB to TTL' chip. If you want to ensure which device is yours, you can use the command "sudo dmesg --follow" to check when the chip is connecting to your computer.
+<!-- The '/dev/ttyUSB0' is a 'USB to TTL' chip. If you want to ensure which device is yours, you can use the command "sudo dmesg --follow" to check when the chip is connecting to your computer. -->
+
+`/dev/ttyUSB0` is a `USB to TTL` chip. If you want to identify which device is yours, you can use the command `sudo dmesg --follow` to check the messages when the chip connects to your computer.
 
 </details>
 

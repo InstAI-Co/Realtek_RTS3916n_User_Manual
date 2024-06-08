@@ -15,7 +15,7 @@ We provide the Container to let user can easyily sampling, convert model and cro
 
 ```shell
 # Load Image
-docker load -i container.tar
+docker load -i image.tar
 
 # Run Container
 docker run -it --rm -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v3
@@ -32,6 +32,10 @@ Before starting, let's briefly explain the different features. As you can see, t
 `upd.sh`: (optional) Cross-compile the project and send data to the UDP server (Refer to [UDP](../doc/udp.md))
 
 ![alt text](../img/docker-procedure.png)
+
+<!-- Description -->
+
+This flowchart outlines the process of developing an executable file: data samples are collected using `collect.sh`, labeled, used to train a model, converted via `convert.sh`, placed in the project folder, and compiled into an executable using `compile.sh` with inference verification.
 
 </details>
 

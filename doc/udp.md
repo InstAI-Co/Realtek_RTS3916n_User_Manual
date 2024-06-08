@@ -2,6 +2,8 @@
 
 It is the same way to cross-compile your project, like selecting stream mode. After compiling the project by executing the script named `udp.sh`, you will get the `build` folder in the project named `transfer_model`.
 
+![](../img/udp-pipeline.png)
+
 <details open>
 <summary>Compile</summary>
 
