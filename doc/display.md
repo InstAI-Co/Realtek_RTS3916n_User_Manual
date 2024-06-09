@@ -1,6 +1,6 @@
 # <div align="center">How To Display Frame In The Real-Time</div>
 
-There are two different ways to display the frames in the window, and the list below is our main method to transport the image, as follows:
+There are two different ways to display the AI model inference result frames in the window in real-time, and the following list is shows our methods of transporting the image with bounding boxes from the board to display window on PC:
 
 - NFS
 - UDP
@@ -30,7 +30,7 @@ After setting up the environments, you can select one of the modes to use.
 python src/display-real-time.py path/to/stream/image/
 ```
 
-Since the NFS mode will generate multiple images in the common folder, it means that when the detected frame is saved in bitmap format, the computer-side will capture the latest frame and display it in the window to simulate real-time.
+Since the NFS mode will generate multiple images in the sharing folder, it means that whenever the AI model inference result frame is saved in the folder (bitmap format), the PC-side will capture the latest frame and display it in the window to achieve real-time AI inference.
 
 ### UDP
 
@@ -38,7 +38,7 @@ Since the NFS mode will generate multiple images in the common folder, it means 
 python src/udp-server.py <IP> <PORT> <RESIZE_WIDTH> <RESIZE_HEIGHT>
 ```
 
-This is an efficient way to display the frames because it provides an easy interface to capture the frames sent by the Realtek EVB. It also shows low latency compared with NFS-based transport.
+This is an efficient way to display the frames because it provides an event-triggered mechanism (via UDP) to  transfer the AI inferenced results frames from the Realtek EVB to PC, which shows low latency compared with NFS-based transport.
 
 </details>
 

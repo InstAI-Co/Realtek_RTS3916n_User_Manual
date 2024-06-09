@@ -1,4 +1,4 @@
-# <div align="center">How To Transfer Project To UDP Mode</div>
+# <div align="center">How To Display Frame In The Real-Time (via UDP)</div>
 
 It is the same way to cross-compile your project, like selecting stream mode. After compiling the project by executing the script named `udp.sh`, you will get the `build` folder in the project named `transfer_model`.
 
@@ -11,7 +11,7 @@ It is the same way to cross-compile your project, like selecting stream mode. Af
 sh /udp.sh transfer_model
 ```
 
-After the build is completed, you can just put the executable files into `/mnt` on the board to see the detection result.
+After the build is completed, you can just put the executable files into NFS sharing folder (`/mnt` on the board) to see the detection result.
 
 ```shell
 # Remember to execute the files on the board

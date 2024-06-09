@@ -1,4 +1,4 @@
-# <div align="center">Connect To Realtek Board</div>
+# <div align="center">Connect Realtek Board with PC</div>
 
 <div align="center">
     <img src="../img/minicom.png" alt="minicom">
@@ -6,7 +6,7 @@
 
 ## <div align="center">Minicom</div>
 
-***Minicom*** is used to communicate with the Realtek board. When the package is installed, we will power on the board and also use a 'USB to TTL' chip to receive data from the Realtek.
+***Minicom*** is a tool on PC, used to communicate with the Realtek board. After the package is installed, power on the board and also use a 'USB to TTL' chip to receive data from the board. (refer to Realtek Board - Wiring part)
 
 <details open>
 <summary>Install</summary>
@@ -36,16 +36,16 @@ sudo minicom -D /dev/ttyUSB0
 
 <!-- The '/dev/ttyUSB0' is a 'USB to TTL' chip. If you want to ensure which device is yours, you can use the command "sudo dmesg --follow" to check when the chip is connecting to your computer. -->
 
-`/dev/ttyUSB0` is a `USB to TTL` chip. If you want to identify which device is yours, you can use the command `sudo dmesg --follow` to check the messages when the chip connects to your computer.
+`/dev/ttyUSB0` is the device path for connected `USB to TTL` chip. If you want to identify which path is USB to TTL chip that has been connected, you can use the command `sudo dmesg --follow` to check the messages and find the device path when the chip connects to your computer.
 
 </details>
 
 ## <div align="center">NFS</div>
 
-***NFS*** is used to share files or folders from your computer to the Realtek Board. We do this because when we complete transferring the model format, it allows the Board to use the model during inference.
+***NFS*** is used to share files and folders from your computer to the Realtek Board. After we complete converting and cross-compiling the YOLOv3-tiny model and generate the model executable, NFS tool allows us to transfer it from PC to the Board before performing inference step.
 
 <details open>
-<summary>Install</summary>
+<summary>Install NFS on PC</summary>
 
 ```shell
 sudo apt install nfs-kernel-server
@@ -67,7 +67,7 @@ After entering edit mode, add the following rule:
 /home/sean/Desktop/realtek/mnt *(rw,no_root_squash,no_subtree_check,sync)
 ```
 
-When saving your history, you should use the following command to update the settings:
+After saving the rule, you should use the following command to update the settings:
 
 ```shell
 sudo exportfs -r
@@ -77,16 +77,16 @@ sudo exportfs -r
 
 ## <div align="center">Reaktek Board</div>
 
-<details open>
-<summary>Power on the board</summary>
-
-When you power on the board, you will see the message appear in your shell. Ensure entering minicom to commnuicate by USB to TTL chip.
-
 <div align="center" style="font-size: 18px; font-weight: bold;">Wiring</div>
 
 <div align="center">
     <img src="../img/realtek_board.png" width="700">
 </div>
+
+<details open>
+<summary>Power on the board</summary>
+
+After connecting USB to TTL chip with Board and PC, enter minicom with proper settings. When you power on the board, you will see the message appear in your minicom terminal on PC.
 
 <div align="center" style="font-size: 18px; font-weight: bold;">Received Message When Power ON</div>
 
@@ -117,7 +117,7 @@ ifconfig eth0 192.168.XXX.XXX
     <img src="../img/ifconfig.png" width="700">
 </div>
 
-Ensure both sides are on the same subnet; otherwise, the following step will fail. You can try "ping" command to check status.
+Ensure both sides are on the same IP subnet (set Ethernet as Static IP on PC); otherwise, the following step will fail. You can try "ping" command to check connection status.
 
 ```shell
 mount -t nfs -o nolock 192.168.XXX.XXX:/path/to/your/folder/ /mnt/
