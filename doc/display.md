@@ -34,6 +34,17 @@ Since the NFS mode will generate multiple images in the sharing folder, it means
 
 ### UDP
 
+We suggest you use the `pyenv` tool to set up your environment. Remember to install Python version `3.10.12` and follow the command below.
+
+```shell
+python3 -m venv myenv
+source myenv/bin/activate
+pip install --upgrade pip==24.0
+pip install -r requirements.txt 
+```
+
+Now, just execute the code to receive an image from the board.
+
 ```shell
 python src/udp-server.py <IP> <PORT> <RESIZE_WIDTH> <RESIZE_HEIGHT>
 ```

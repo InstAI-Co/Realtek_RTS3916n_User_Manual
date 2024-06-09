@@ -30,7 +30,7 @@ There is one last step to do. Before starting, clone the repository first.
 git clone https://github.com/InstAI-Co/Realtek-RTS3916n-Display-Multiple-Image.git
 ```
 
-We suggest you use the `pyenv` tool to set up your environment. Remember to install Python version `3.10.12` and follow the command below."
+<!-- We suggest you use the `pyenv` tool to set up your environment. Remember to install Python version `3.10.12` and follow the command below."
 
 ```shell
 python3 -m venv myenv
@@ -44,7 +44,7 @@ Now, just execute the code to receive an image from the board.
 ```shell
 # For additional information, refer to README.md in the repository where we cloned it.
 python src/udp-server.py <IP> <PORT> <RESIZE_WIDTH> <RESIZE_HEIGHT>
-```
+``` -->
 
 </details>
 

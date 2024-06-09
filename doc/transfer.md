@@ -18,7 +18,7 @@ We provide the Container to let user easily sampling pictures, converting model 
 docker load -i image.tar
 
 # Run Container
-docker run -it --rm -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v3
+docker run -it --rm -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v4
 ```
 
 Before starting, let's briefly explain the features of Docker. As you can see, there are three main functions:
