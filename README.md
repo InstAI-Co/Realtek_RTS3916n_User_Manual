@@ -17,6 +17,6 @@ This README.md is a user manual for building the environment that can sample ima
 - [How To Excute the Inference](./doc/inference.md)
 - [How To Display Frame In Real-Time](./doc/display.md)
 
-## Application
+<!-- ## Application -->
 
-- [How To Display Frame In The Real-Time (via UDP)](./doc/udp.md)
+<!-- - [How To Display Frame In The Real-Time (via UDP)](./doc/udp.md) -->

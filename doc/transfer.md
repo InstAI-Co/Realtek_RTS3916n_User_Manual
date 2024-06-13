@@ -110,4 +110,4 @@ network_binary.nb  yolov3tiny
 Congratulations! You have completed this tutorial. You can refer to other documents below:
 
 - [How To Excute the Inference](../doc/inference.md)
-- [How To Display Frame In The Real-Time (via UDP)](../doc/udp.md)
+<!-- - [How To Display Frame In The Real-Time (via UDP)](../doc/udp.md) -->
