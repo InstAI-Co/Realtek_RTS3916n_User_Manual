@@ -4,7 +4,7 @@ You must have completed the tutorial in the previous step to get the `transfer_m
 
 ## <div align="center">How to Start</div>
 
-Remember, in the beginning, we [set up NFS](./connect_board.md) to share the path specified in config file `/etc/exports`. Here, we will place our `build` folder into the sharing folder. Then, we will execute the file on the board to implement AI inference.
+Remember, in the beginning, we [set up NFS](./connect_board.md) to share the path specified in config file `/etc/exports` on PC. Here, we will place our `build` folder into the sharing folder. Then, we will execute the file on the board to implement AI inference.
 
 <details open>
 <summary>Inference</summary>
@@ -14,6 +14,12 @@ Assume you have completed the necessary commands in the previous step. Just plac
 ```shell
 # On the Board-Side
 ls /mnt/build
+```
+
+Download the necessary libraries, place in directory `/mnt/lib` on PC and include them at run-time with command on board:
+
+```shell
+export LD_LIBRARY_PATH=/mnt/lib
 ```
 
 Terminal response:

@@ -1,6 +1,6 @@
 # <div align="center">How To Transfer Model</div>
 
-Before running the inference feature, you need to have a model ready. We provide a YOLOv3-tiny architecture for implementing the custom model. The first step is to provide the trained custom model as input, and then transfer the model to a specific format that makes it capable to run on the Realtek 3916n.
+Before running the inference feature, you need to have a model ready. We use YOLOv3-tiny architecture for implementing the custom model. The first step is to provide the trained custom model as input, and then transfer the model to a specific format that makes it capable to run on the Realtek 3916n.
 
 The image below describes the model transfer procedure. We will use "acuity tool" to convert your model here.
 
@@ -8,7 +8,22 @@ The image below describes the model transfer procedure. We will use "acuity tool
 
 ## <div align="center">How to Start</div>
 
-We provide the Container to let user easily sampling pictures, converting model and cross-compiling to generate an executable for RTS3916n. You can download [here](https://drive.google.com/file/d/1NfLpzos6K0CqWbVXyVpKC9tl2tViwrFs/view?usp=sharing).
+We provide the Container to let user easily sampling pictures, converting model and cross-compiling to generate an executable for RTS3916n. You can download [here](https://drive.google.com/file/d/1NfLpzos6K0CqWbVXyVpKC9tl2tViwrFs/view?usp=sharing). Move the downloaded tar file to directory `~/Realtek`. MD5 checksum should be `899834e2b723383e6b7635cd48b77259`.
+
+<details open>
+<summary>Verify zip file with Checksum</summary>
+
+```shell
+cd ~/Realtek
+md5sum Transfer_Model.tar
+```
+
+<details open>
+<summary>Extract tar File</summary>
+
+```shell
+tar -xvf Transfer_Model.tar
+```
 
 <details open>
 <summary>Load/Run Container</summary>
