@@ -39,6 +39,17 @@ It is the same way to cross-compile your project, like selecting stream mode. Af
 ![](../img/udp-pipeline.png)
 
 <details open>
+<summary>Apply Patch</summary>
+
+Apply patch for UDP server IP adjustment in Docker container `realtek_rts3916n` for the first time.
+
+```shell
+cp Realtek-RTS3916n-Display-Multiple-Image/patch/udp_adj_ip.patch /realtek/acuity_example_pack-v2.1_release/application/yolov3tiny/unify_nbg/Realtek_RTS3916n_libraries/UDP_Client/
+cd /realtek/acuity_example_pack-v2.1_release/application/yolov3tiny/unify_nbg/Realtek_RTS3916n_libraries/UDP_Client/
+patch -p0 < udp_adj_ip.patch
+```
+
+<details open>
 <summary>Compile</summary>
 
 ```shell

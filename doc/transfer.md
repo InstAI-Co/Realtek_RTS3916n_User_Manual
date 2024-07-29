@@ -8,13 +8,13 @@ The image below describes the model transfer procedure. We will use "acuity tool
 
 ## <div align="center">How to Start</div>
 
-We provide the Container to let user easily sampling pictures, converting model and cross-compiling to generate an executable for RTS3916n. You can download [here](https://drive.google.com/file/d/1NfLpzos6K0CqWbVXyVpKC9tl2tViwrFs/view?usp=sharing). Move the downloaded tar file to directory `~/Realtek`. MD5 checksum should be `899834e2b723383e6b7635cd48b77259`.
+We provide the Container to let user easily sampling pictures, converting model and cross-compiling to generate an executable for RTS3916n. You can download [here](https://drive.google.com/file/d/1NfLpzos6K0CqWbVXyVpKC9tl2tViwrFs/view?usp=sharing). Move the downloaded tar file to directory `~/realtek_rts3916n`. MD5 checksum should be `899834e2b723383e6b7635cd48b77259`.
 
 <details open>
 <summary>Verify zip file with Checksum</summary>
 
 ```shell
-cd ~/Realtek
+cd ~/realtek_rts3916n
 md5sum Transfer_Model.tar
 ```
 
@@ -28,12 +28,25 @@ tar -xvf Transfer_Model.tar
 <details open>
 <summary>Load/Run Container</summary>
 
+Load the Docker image and create a container with name `realtek_rts3916n`.
+
 ```shell
 # Load Image
 docker load -i image.tar
 
-# Run Container
-docker run -it --rm -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v4
+# Start a New Docker Container and Reserve it on System
+docker run -it --name realtek_rts3916n -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v4
+```
+
+If you want to exit from docker, just type the command:
+```shell
+exit
+```
+
+Start the reserved Docker container with the commands:
+```shell
+docker start realtek_rts3916n
+docker attach realtek_rts3916n
 ```
 
 Before starting, let's briefly explain the features of Docker. As you can see, there are three main functions:
