@@ -82,12 +82,21 @@ python3 -m venv myenv
 source myenv/bin/activate
 pip install --upgrade pip==24.0
 pip install -r requirements.txt 
+# remove default numpy v2, and install numpy v1
+pip uninstall numpy
+pip install numpy==1.26.4
 ```
 
 Now, just execute the code to receive an image from the board.
 
 ```shell
 python src/udp-server.py <IP> <PORT> <RESIZE_WIDTH> <RESIZE_HEIGHT>
+```
+
+e.g. set up UDP server on local PC, with display window resolution 640x480
+
+```shell
+python src/udp-server.py 0.0.0.0 8080 640 480
 ```
 
 This is an efficient way to display the frames because it provides an event-triggered mechanism (via UDP) to  transfer the AI inferenced results frames from the Realtek EVB to PC, which shows low latency compared with NFS-based transport.
