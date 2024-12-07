@@ -53,6 +53,26 @@ git clone https://github.com/InstAI-Co/Realtek_RTS3916n_UDP_Inference.git
 </details>
 
 <details open>
+<summary>Update Converted Model to Repository Manually</summary>
+Overwrite the converted model source files and binary in Git repository.
+
+```shell
+cp -f [converted model path]/transfer_model/nbg_meta.json Realtek_RTS3916n_UDP_Inference/
+cp -f [converted model path]/transfer_model/network_binary.nb Realtek_RTS3916n_UDP_Inference/
+cp -f [converted model path]/transfer_model/vnn_yolov3tiny.c Realtek_RTS3916n_UDP_Inference/
+```
+
+Adjust the class number of custom model manually in `yolov3tiny_parameters.h`
+
+```shell
+vi Realtek_RTS3916n_UDP_Inference/yolov3tiny_parameters.h
+```
+
+Modify definition value `N_CLASSES` to actual model output class number.
+
+</details>
+
+<details open>
 <summary>Compile</summary>
 
 ```shell
