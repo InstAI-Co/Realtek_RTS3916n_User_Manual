@@ -39,28 +39,34 @@ It is the same way to cross-compile your project, like selecting stream mode. Af
 ![](../img/udp-pipeline.png)
 
 <details open>
-<summary>Apply Patches in Docker Container for the First Time</summary>
+<summary>Download Repository Realtek_RTS3916n_UDP_Inference from Git for the First Time</summary>
 
-Apply patches for UDP client program executes on RTS3916n in Docker container `realtek_rts3916n` for the first time.
+Download source code for compiling UDP client program executes on RTS3916n in Docker container `realtek_rts3916n` for the first time.
+
+<b>Warning</b>: this process requires InstAI's permission and the key for accessing Git Repo `Realtek_RTS3916n_UDP_Inference`.
 
 ```shell
-cp Realtek-RTS3916n-Display-Multiple-Image/patch/*.patch /realtek/acuity_example_pack-v2.1_release/application/yolov3tiny/unify_nbg/Realtek_RTS3916n_libraries/UDP_Client/
-cd /realtek/acuity_example_pack-v2.1_release/application/yolov3tiny/unify_nbg/Realtek_RTS3916n_libraries/UDP_Client/
-for i in *.patch; do patch -p0 < $i; done
+cd /realhome
+git clone https://github.com/InstAI-Co/Realtek_RTS3916n_UDP_Inference.git
 ```
+
+</details>
 
 <details open>
 <summary>Compile</summary>
 
 ```shell
-sh /udp.sh transfer_model
+cd Realtek_RTS3916n_UDP_Inference
+make
 ```
 
-After the build is completed, you can just put the executable files into NFS sharing folder (`/mnt` on the board) to see the detection result.
+After the build is completed, put all of the contents in folder `build/`  into NFS sharing folder (`/mnt` on the board) to see the detection result.
+
+Argument `[UDP server IP]` is the PC IP address that runs UDP server python program, e.g. `192.168.1.8`. Refer to the next section to set up the environment on PC. Both PC and RTS3916n must be connected with Ethernet cable to transmit camera images and inference results.
 
 ```shell
 # Remember to execute the files on the board
-./yolov3tiny network_binary.nb
+./yolov3tiny network_binary.nb [UDP server IP]
 ```
 
 </details>
@@ -71,8 +77,7 @@ After the build is completed, you can just put the executable files into NFS sha
 There is one last step to do. Before starting, clone the repository first.
 
 ```shell
-# This command will require you to enter a key to access. Please contact us, and we will provide the key for you.
-git clone https://github.com/InstAI-Co/Realtek-RTS3916n-Display-Multiple-Image.git
+cd Realtek-RTS3916n-Display-Multiple-Image
 ```
 
 We suggest you use the `pyenv` tool to set up your environment. Remember to install Python version `3.10.12` and follow the command below.

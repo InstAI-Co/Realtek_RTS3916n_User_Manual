@@ -35,7 +35,7 @@ Load the Docker image and create a container with name `realtek_rts3916n`.
 docker load -i image.tar
 
 # Start a New Docker Container and Reserve it on System
-docker run -it --name realtek_rts3916n -v $(pwd):/workspace/ --workdir /workspace instai/transfer_model:v4
+docker run -it --name realtek_rts3916n -v $(pwd):/workspace/ -v /home/$USER/:/realhome --workdir /workspace instai/transfer_model:v4
 ```
 
 If you want to exit from docker, just type the command:
